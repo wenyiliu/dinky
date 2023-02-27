@@ -38,6 +38,7 @@ dlink-web/node/*
 dlink-web/dist/*
 dlink-web/.mfsu-production
 dlink-admin/src/main/resources/static/*
+dlink-admin/src/main/resources/application*
 dependency-reduced-pom.xml
 
 # Dinky Docs gitignore
