@@ -20,7 +20,7 @@ spring:
     allow-circular-references: true
 
   #  默认使用内存缓存元数据信息，
-  #  dlink支持redis缓存，如有需要请把simple改为redis，并打开下面的redis连接配置
+  #  dlink支持redis缓存，如有需要请把simple改为redis，并打开下面的redis的连接配置
   #  子配置项可以按需要打开或自定义配置
   cache:
     type: simple
