@@ -1,0 +1,2 @@
+com.dlink.connector.pusub.factory.PubsubDynamicTableSinkFactory
+com.dlink.connector.pusub.factory.PubsubDynamicTableSourceFactory
