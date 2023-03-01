@@ -26,6 +26,7 @@
 
     <artifactId>dlink-admin</artifactId>
 
+
     <dependencies>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -129,6 +130,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun/tools -->
+
         <!--        <dependency>-->
         <!--            <groupId>cn.dev33</groupId>-->
         <!--            <artifactId>sa-token-dao-redis-jackson</artifactId>-->
@@ -174,10 +177,6 @@
             <artifactId>dlink-gateway</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dlink</groupId>
-            <artifactId>dlink-alert-slack</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
         </dependency>
@@ -215,6 +214,15 @@
             <groupId>io.prometheus.jmx</groupId>
             <artifactId>jmx_prometheus_javaagent</artifactId>
             <version>0.16.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-orc_2.11</artifactId>
+            <version>1.13.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dlink</groupId>
+            <artifactId>dlink-alert-slack</artifactId>
         </dependency>
     </dependencies>
 
@@ -326,20 +334,20 @@
         </plugins>
     </build>
 
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            <id>mac</id>-->
-<!--            <activation>-->
-<!--                <os>-->
-<!--                    <family>mac</family>-->
-<!--                </os>-->
-<!--            </activation>-->
-<!--            <dependencies>-->
-<!--                <dependency>-->
-<!--                    <groupId>io.netty</groupId>-->
-<!--                    <artifactId>netty-resolver-dns-native-macos</artifactId>-->
-<!--                </dependency>-->
-<!--            </dependencies>-->
-<!--        </profile>-->
-<!--    </profiles>-->
+    <profiles>
+        <profile>
+            <id>mac</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                </os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>io.netty</groupId>
+                    <artifactId>netty-resolver-dns-native-macos</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 </project>

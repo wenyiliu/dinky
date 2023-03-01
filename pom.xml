@@ -767,7 +767,6 @@
         <profile>
             <id>web</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
                 <property>
                     <name>web</name>
                 </property>
@@ -789,19 +788,19 @@
 
         </profile>
 
-        <!--        <profile>-->
-        <!--            <id>prod</id>-->
-        <!--            <activation>-->
-        <!--                <activeByDefault>true</activeByDefault>-->
-        <!--                <property>-->
-        <!--                    <name>!dev</name>-->
-        <!--                </property>-->
-        <!--            </activation>-->
-        <!--            <properties>-->
-        <!--                &lt;!&ndash;  `provided` for product environment ,`compile` for dev environment  &ndash;&gt;-->
-        <!--                <scope.runtime>provided</scope.runtime>-->
-        <!--            </properties>-->
-        <!--        </profile>-->
+                <profile>
+                    <id>prod</id>
+                    <activation>
+                        <activeByDefault>true</activeByDefault>
+                        <property>
+                            <name>!dev</name>
+                        </property>
+                    </activation>
+                    <properties>
+                        <!--  `provided` for product environment ,`compile` for dev environment  -->
+                        <scope.runtime>provided</scope.runtime>
+                    </properties>
+                </profile>
 
                 <profile>
                     <id>scala-2.11</id>

@@ -19,6 +19,19 @@
 
 package com.dlink.function.util;
 
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.convert.Convert;
+import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.lang.Dict;
+import cn.hutool.core.lang.Opt;
+import cn.hutool.core.map.MapUtil;
+import cn.hutool.core.util.ClassLoaderUtil;
+import cn.hutool.core.util.ReUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.crypto.digest.MD5;
+import cn.hutool.extra.template.TemplateConfig;
+import cn.hutool.extra.template.TemplateEngine;
+import cn.hutool.extra.template.engine.freemarker.FreemarkerEngine;
 import com.dlink.assertion.Asserts;
 import com.dlink.config.Dialect;
 import com.dlink.context.DinkyClassLoaderContextHolder;
@@ -33,9 +46,13 @@ import com.dlink.gateway.GatewayType;
 import com.dlink.pool.ClassEntity;
 import com.dlink.pool.ClassPool;
 import com.dlink.process.exception.DinkyException;
-
+import groovy.lang.GroovyClassLoader;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.table.catalog.FunctionLanguage;
+import org.codehaus.groovy.control.CompilerConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.nio.charset.Charset;
@@ -46,25 +63,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
-
-import org.codehaus.groovy.control.CompilerConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.convert.Convert;
-import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.lang.Dict;
-import cn.hutool.core.lang.Opt;
-import cn.hutool.core.map.MapUtil;
-import cn.hutool.core.util.ClassLoaderUtil;
-import cn.hutool.core.util.ReUtil;
-import cn.hutool.core.util.StrUtil;
-import cn.hutool.crypto.digest.MD5;
-import cn.hutool.extra.template.TemplateConfig;
-import cn.hutool.extra.template.TemplateEngine;
-import cn.hutool.extra.template.engine.freemarker.FreemarkerEngine;
-import groovy.lang.GroovyClassLoader;
 
 /**
  * UDFUtil
@@ -143,7 +141,7 @@ public class UDFUtil {
     }
 
     public static String[] initPythonUDF(List<UDF> udf, GatewayType gatewayType, Integer missionId,
-            Configuration configuration) {
+                                         Configuration configuration) {
         return FunctionFactory.initUDF(
                 CollUtil.newArrayList(CollUtil.filterNew(udf, x -> x.getFunctionLanguage() == FunctionLanguage.PYTHON)),
                 missionId, configuration).getPyPaths();
@@ -285,31 +283,34 @@ public class UDFUtil {
     }
 
     public static UDF toUDF(String statement) {
-        if (isUdfStatement(statement)) {
-            Pattern pattern = Pattern.compile(FUNCTION_SQL_REGEX, Pattern.CASE_INSENSITIVE);
-            List<String> groups = CollUtil.removeEmpty(ReUtil.getAllGroups(pattern, statement));
-            String udfName = groups.get(1);
-            String className = groups.get(2);
-            if (ClassLoaderUtil.isPresent(className)) {
-                // 获取已经加载在java的类，对应的包路径
-                try {
-                    JarPathContextHolder.addUdfPath(
-                            FileUtil.file(DinkyClassLoaderContextHolder.get().loadClass(className).getProtectionDomain()
-                                    .getCodeSource().getLocation().getPath()));
-                } catch (ClassNotFoundException e) {
-                    throw new DinkyException(e);
-                }
-                return null;
-            }
-
-            UDF udf = UdfCodePool.getUDF(className);
-            return UDF.builder()
-                    .name(udfName)
-                    .className(className)
-                    .code(udf.getCode())
-                    .functionLanguage(udf.getFunctionLanguage())
-                    .build();
+        if (StringUtils.isBlank(statement)) {
+            return null;
         }
-        return null;
+        Pattern pattern = Pattern.compile(FUNCTION_SQL_REGEX, Pattern.CASE_INSENSITIVE);
+        List<String> groups = CollUtil.removeEmpty(ReUtil.getAllGroups(pattern, statement));
+        if (groups.size() < 3) {
+            return null;
+        }
+        String udfName = groups.get(1);
+        String className = groups.get(2);
+        if (ClassLoaderUtil.isPresent(className)) {
+            // 获取已经加载在java的类，对应的包路径
+            try {
+                JarPathContextHolder.addUdfPath(
+                        FileUtil.file(DinkyClassLoaderContextHolder.get().loadClass(className).getProtectionDomain()
+                                .getCodeSource().getLocation().getPath()));
+            } catch (ClassNotFoundException e) {
+                throw new DinkyException(e);
+            }
+            return null;
+        }
+
+        UDF udf = UdfCodePool.getUDF(className);
+        return UDF.builder()
+                .name(udfName)
+                .className(className)
+                .code(udf.getCode())
+                .functionLanguage(udf.getFunctionLanguage())
+                .build();
     }
 }

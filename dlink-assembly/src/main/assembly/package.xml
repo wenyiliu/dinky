@@ -50,14 +50,14 @@
                 <include>*.jar</include>
             </includes>
         </fileSet>
-        <fileSet>
-            <directory>${project.parent.basedir}/dlink-doc/sql</directory>
-            <outputDirectory>sql</outputDirectory>
-            <includes>
-                <include>dinky.sql</include>
-                <include>upgrade/*/*/*.sql</include>
-            </includes>
-        </fileSet>
+<!--        <fileSet>-->
+<!--            <directory>${project.parent.basedir}/dlink-doc/sql</directory>-->
+<!--            <outputDirectory>sql</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>dinky.sql</include>-->
+<!--                <include>upgrade/*/*/*.sql</include>-->
+<!--            </includes>-->
+<!--        </fileSet>-->
         <!--<fileSet>-->
         <!--    <directory>${project.parent.basedir}/build/extends/</directory>-->
         <!--    <outputDirectory>plugins</outputDirectory>-->
