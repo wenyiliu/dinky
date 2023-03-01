@@ -28,22 +28,25 @@
     <packaging>pom</packaging>
 
     <profiles>
-        <profile>
-            <id>flink-1.11</id>
-            <modules>
-                <module>dlink-connector-jdbc-1.11</module>
-            </modules>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.11</id>-->
+<!--            <modules>-->
+<!--                <module>dlink-connector-jdbc-1.11</module>-->
+<!--            </modules>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>flink-1.12</id>
-            <modules>
-                <module>dlink-connector-jdbc-1.12</module>
-            </modules>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.12</id>-->
+<!--            <modules>-->
+<!--                <module>dlink-connector-jdbc-1.12</module>-->
+<!--            </modules>-->
+<!--        </profile>-->
 
         <profile>
             <id>flink-1.13</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <modules>
                 <module>dlink-connector-jdbc-1.13</module>
                 <module>dlink-connector-phoenix-1.13</module>
@@ -53,20 +56,20 @@
             </modules>
         </profile>
 
-        <profile>
-            <id>flink-1.14</id>
-            <modules>
-                <module>dlink-connector-jdbc-1.14</module>
-                <module>dlink-connector-phoenix-1.14</module>
-                <module>dlink-connector-pulsar-1.14</module>
-            </modules>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.14</id>-->
+<!--            <modules>-->
+<!--                <module>dlink-connector-jdbc-1.14</module>-->
+<!--                <module>dlink-connector-phoenix-1.14</module>-->
+<!--                <module>dlink-connector-pulsar-1.14</module>-->
+<!--            </modules>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>flink-1.15</id>
-            <modules>
+<!--        <profile>-->
+<!--            <id>flink-1.15</id>-->
+<!--            <modules>-->
 
-            </modules>
-        </profile>
+<!--            </modules>-->
+<!--        </profile>-->
     </profiles>
 </project>

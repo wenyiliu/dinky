@@ -42,6 +42,7 @@ public class FlinkInterceptor {
         if (executor.isUseSqlFragment()) {
             statement = executor.getSqlManager().parseVariable(statement);
         }
+        //todo
         return statement.trim();
     }
 

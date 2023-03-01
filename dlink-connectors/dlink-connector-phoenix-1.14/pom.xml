@@ -37,11 +37,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.dlink</groupId>
-            <artifactId>dlink-flink-1.14</artifactId>
-            <scope>${scope.runtime}</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.dlink</groupId>-->
+<!--            <artifactId>dlink-flink-1.14</artifactId>-->
+<!--            <scope>${scope.runtime}</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.phoenix</groupId>
             <artifactId>phoenix-core</artifactId>

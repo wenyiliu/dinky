@@ -66,20 +66,20 @@
         <!--        <include>%regex[dlink-client-1.\d+-${project.version}.jar]</include>-->
         <!--    </includes>-->
         <!--</fileSet>-->
-        <fileSet>
-            <directory>${project.parent.basedir}/build/extends/</directory>
-            <outputDirectory>plugins/flink1.11</outputDirectory>
-            <includes>
-                <include>dlink-client-1.11-${project.version}.jar</include>
-            </includes>
-        </fileSet>
-        <fileSet>
-            <directory>${project.parent.basedir}/build/extends/</directory>
-            <outputDirectory>plugins/flink1.12</outputDirectory>
-            <includes>
-                <include>dlink-client-1.12-${project.version}.jar</include>
-            </includes>
-        </fileSet>
+<!--        <fileSet>-->
+<!--            <directory>${project.parent.basedir}/build/extends/</directory>-->
+<!--            <outputDirectory>plugins/flink1.11</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>dlink-client-1.11-${project.version}.jar</include>-->
+<!--            </includes>-->
+<!--        </fileSet>-->
+<!--        <fileSet>-->
+<!--            <directory>${project.parent.basedir}/build/extends/</directory>-->
+<!--            <outputDirectory>plugins/flink1.12</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>dlink-client-1.12-${project.version}.jar</include>-->
+<!--            </includes>-->
+<!--        </fileSet>-->
         <fileSet>
             <directory>${project.parent.basedir}/build/extends/</directory>
             <outputDirectory>plugins/flink1.13</outputDirectory>
@@ -88,30 +88,30 @@
                 <include>dlink-client-1.13-${project.version}.jar</include>
             </includes>
         </fileSet>
-        <fileSet>
-            <directory>${project.parent.basedir}/build/extends/</directory>
-            <outputDirectory>plugins/flink1.14</outputDirectory>
-            <includes>
-                <include>dlink-catalog-mysql-1.14-${project.version}.jar</include>
-                <include>dlink-client-1.14-${project.version}.jar</include>
-            </includes>
-        </fileSet>
-        <fileSet>
-            <directory>${project.parent.basedir}/build/extends/</directory>
-            <outputDirectory>plugins/flink1.15</outputDirectory>
-            <includes>
-                <include>dlink-catalog-mysql-1.15-${project.version}.jar</include>
-                <include>dlink-client-1.15-${project.version}.jar</include>
-            </includes>
-        </fileSet>
-        <fileSet>
-            <directory>${project.parent.basedir}/build/extends/</directory>
-            <outputDirectory>plugins/flink1.16</outputDirectory>
-            <includes>
-                <include>dlink-catalog-mysql-1.16-${project.version}.jar</include>
-                <include>dlink-client-1.16-${project.version}.jar</include>
-            </includes>
-        </fileSet>
+<!--        <fileSet>-->
+<!--            <directory>${project.parent.basedir}/build/extends/</directory>-->
+<!--            <outputDirectory>plugins/flink1.14</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>dlink-catalog-mysql-1.14-${project.version}.jar</include>-->
+<!--                <include>dlink-client-1.14-${project.version}.jar</include>-->
+<!--            </includes>-->
+<!--        </fileSet>-->
+<!--        <fileSet>-->
+<!--            <directory>${project.parent.basedir}/build/extends/</directory>-->
+<!--            <outputDirectory>plugins/flink1.15</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>dlink-catalog-mysql-1.15-${project.version}.jar</include>-->
+<!--                <include>dlink-client-1.15-${project.version}.jar</include>-->
+<!--            </includes>-->
+<!--        </fileSet>-->
+<!--        <fileSet>-->
+<!--            <directory>${project.parent.basedir}/build/extends/</directory>-->
+<!--            <outputDirectory>plugins/flink1.16</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>dlink-catalog-mysql-1.16-${project.version}.jar</include>-->
+<!--                <include>dlink-client-1.16-${project.version}.jar</include>-->
+<!--            </includes>-->
+<!--        </fileSet>-->
 
         <fileSet>
             <directory>${project.parent.basedir}/build/extends/</directory>

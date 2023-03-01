@@ -74,30 +74,33 @@
     </build>
 
     <profiles>
-        <profile>
-            <id>flink-1.11</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.11</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.11</id>-->
+<!--            <dependencies>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.11</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--            </dependencies>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>flink-1.12</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.12</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.12</id>-->
+<!--            <dependencies>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.12</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--            </dependencies>-->
+<!--        </profile>-->
 
         <profile>
             <id>flink-1.13</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <dependencies>
                 <dependency>
                     <groupId>com.dlink</groupId>
@@ -107,73 +110,73 @@
             </dependencies>
         </profile>
 
-        <profile>
-            <id>flink-1.14</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.14</id>-->
+<!--            <dependencies>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.14</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--            </dependencies>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>flink-1.15</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.15</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.15</id>-->
+<!--            <dependencies>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.15</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--            </dependencies>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>flink-1.16</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.16</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
+<!--        <profile>-->
+<!--            <id>flink-1.16</id>-->
+<!--            <dependencies>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.16</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--            </dependencies>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>all</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.11</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.12</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.13</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.15</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>com.dlink</groupId>
-                    <artifactId>dlink-flink-1.16</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
+<!--        <profile>-->
+<!--            <id>all</id>-->
+<!--            <dependencies>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.11</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.12</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.13</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.14</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.15</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>com.dlink</groupId>-->
+<!--                    <artifactId>dlink-flink-1.16</artifactId>-->
+<!--                    <scope>${scope.runtime}</scope>-->
+<!--                </dependency>-->
+<!--            </dependencies>-->
+<!--        </profile>-->
     </profiles>
 </project>

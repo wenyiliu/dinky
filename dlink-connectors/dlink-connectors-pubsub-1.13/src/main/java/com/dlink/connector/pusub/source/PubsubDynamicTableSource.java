@@ -16,6 +16,7 @@ import org.apache.flink.table.connector.source.abilities.SupportsWatermarkPushDo
 import org.apache.flink.table.data.RowData;
 import org.apache.flink.table.types.DataType;
 
+
 import java.io.IOException;
 import java.time.Duration;
 
@@ -34,7 +35,6 @@ public class PubsubDynamicTableSource implements ScanTableSource, SupportsWaterm
     private DecodingFormat<DeserializationSchema<RowData>> decodingFormat;
 
     protected WatermarkStrategy<RowData> watermarkStrategy;
-
 //    public PubsubDynamicTableSource(ReadableConfig options, TableSchema schema,
 //                                    DecodingFormat<DeserializationSchema<RowData>> decodingFormat) {
 //        this.options = options;

@@ -26,15 +26,15 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.dlink</groupId>
-            <artifactId>dlink-client-1.16</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.dlink</groupId>
-            <artifactId>dlink-flink-1.16</artifactId>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.dlink</groupId>-->
+<!--            <artifactId>dlink-client-1.16</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.dlink</groupId>-->
+<!--            <artifactId>dlink-flink-1.16</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.dlink</groupId>
             <artifactId>dlink-client-base</artifactId>

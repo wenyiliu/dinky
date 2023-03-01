@@ -56,14 +56,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-<!--        <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>-->
-        <scala.binary.version>2.12</scala.binary.version>
-        <scala.version>2.12.10</scala.version>
-        <!--  `provided` for product environment ,`compile` for dev environment  -->
+        <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+        <scala.binary.version>2.11</scala.binary.version>
+        <scala.version>2.11.7</scala.version>
+        <!--          `provided` for product environment ,`compile` for dev environment  -->
         <scope.runtime>compile</scope.runtime>
-        <dlink.flink.version>1.14</dlink.flink.version>
+        <dlink.flink.version>1.13</dlink.flink.version>
         <spring-boot-dependencies.version>2.6.13</spring-boot-dependencies.version>
-        <hutool.version>5.8.4</hutool.version>
+        <hutool.version>5.8.12</hutool.version>
         <druid-starter>1.2.8</druid-starter>
         <mybatis-plus-boot-starter.version>3.5.1</mybatis-plus-boot-starter.version>
         <lombok.version>1.18.24</lombok.version>
@@ -156,7 +156,7 @@
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf-java.version}</version>
             </dependency>
-            <!-- hutool java工具类库  -->
+            <!--            &lt;!&ndash; hutool java工具类库  &ndash;&gt;-->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
@@ -275,76 +275,76 @@
                 <artifactId>dlink-client-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-client-1.12</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-client-1.12</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.dlink</groupId>
                 <artifactId>dlink-client-1.13</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-client-1.14</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-client-1.11</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-client-1.15</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-client-1.16</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-client-1.14</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-client-1.11</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-client-1.15</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-client-1.16</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.dlink</groupId>
                 <artifactId>dlink-catalog-mysql-1.13</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-catalog-mysql-1.14</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-catalog-mysql-1.15</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-catalog-mysql-1.16</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-connector-jdbc-1.11</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-connector-jdbc-1.12</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-catalog-mysql-1.14</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-catalog-mysql-1.15</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-catalog-mysql-1.16</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-connector-jdbc-1.11</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-connector-jdbc-1.12</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.dlink</groupId>
                 <artifactId>dlink-connector-jdbc-1.13</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-connector-jdbc-1.14</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-connector-jdbc-1.14</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.dlink</groupId>
                 <artifactId>dlink-connector-phoenix-1.13</artifactId>
@@ -470,16 +470,16 @@
                 <artifactId>dlink-app-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-flink-1.11</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-flink-1.12</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-flink-1.11</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-flink-1.12</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.dlink</groupId>
                 <artifactId>dlink-flink-1.13</artifactId>
@@ -490,16 +490,16 @@
                 <artifactId>dlink-flink-1.14</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-flink-1.15</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.dlink</groupId>
-                <artifactId>dlink-flink-1.16</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-flink-1.15</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.dlink</groupId>-->
+            <!--                <artifactId>dlink-flink-1.16</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
@@ -541,26 +541,26 @@
                 <artifactId>dlink-process</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
-                <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.xml.bind</groupId>
-                <artifactId>jaxb-impl</artifactId>
-                <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.xml.bind</groupId>
-                <artifactId>jaxb-core</artifactId>
-                <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.activation</groupId>
-                <artifactId>activation</artifactId>
-                <version>1.1.1</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>javax.xml.bind</groupId>-->
+            <!--                <artifactId>jaxb-api</artifactId>-->
+            <!--                <version>${jaxb.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.sun.xml.bind</groupId>-->
+            <!--                <artifactId>jaxb-impl</artifactId>-->
+            <!--                <version>${jaxb.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.sun.xml.bind</groupId>-->
+            <!--                <artifactId>jaxb-core</artifactId>-->
+            <!--                <version>${jaxb.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>javax.activation</groupId>-->
+            <!--                <artifactId>activation</artifactId>-->
+            <!--                <version>1.1.1</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>net.gpedro.integrations.slack</groupId>
                 <artifactId>slack-webhook</artifactId>
@@ -594,37 +594,37 @@
                     <version>${maven-surefire-plugin.version}</version>
                 </plugin>
 
-<!--                <plugin>-->
-<!--                    <groupId>org.apache.maven.plugins</groupId>-->
-<!--                    <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                    <version>${maven-checkstyle-plugin.version}</version>-->
-<!--                    <configuration>-->
-<!--                        <consoleOutput>true</consoleOutput>-->
-<!--                        <encoding>UTF-8</encoding>-->
-<!--                        <configLocation>style/checkstyle.xml</configLocation>-->
-<!--                        <failOnViolation>true</failOnViolation>-->
-<!--                        <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
-<!--                        <sourceDirectories>-->
-<!--                            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>-->
-<!--                        </sourceDirectories>-->
-<!--                        <excludes>**\/generated-sources\/</excludes>-->
-<!--                    </configuration>-->
-<!--                    <dependencies>-->
-<!--                        <dependency>-->
-<!--                            <groupId>com.puppycrawl.tools</groupId>-->
-<!--                            <artifactId>checkstyle</artifactId>-->
-<!--                            <version>8.45</version>-->
-<!--                        </dependency>-->
-<!--                    </dependencies>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <goals>-->
-<!--                                <goal>check</goal>-->
-<!--                            </goals>-->
-<!--                            <phase>compile</phase>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
+                <!--                <plugin>-->
+                <!--                    <groupId>org.apache.maven.plugins</groupId>-->
+                <!--                    <artifactId>maven-checkstyle-plugin</artifactId>-->
+                <!--                    <version>${maven-checkstyle-plugin.version}</version>-->
+                <!--                    <configuration>-->
+                <!--                        <consoleOutput>true</consoleOutput>-->
+                <!--                        <encoding>UTF-8</encoding>-->
+                <!--                        <configLocation>style/checkstyle.xml</configLocation>-->
+                <!--                        <failOnViolation>true</failOnViolation>-->
+                <!--                        <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+                <!--                        <sourceDirectories>-->
+                <!--                            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>-->
+                <!--                        </sourceDirectories>-->
+                <!--                        <excludes>**\/generated-sources\/</excludes>-->
+                <!--                    </configuration>-->
+                <!--                    <dependencies>-->
+                <!--                        <dependency>-->
+                <!--                            <groupId>com.puppycrawl.tools</groupId>-->
+                <!--                            <artifactId>checkstyle</artifactId>-->
+                <!--                            <version>8.45</version>-->
+                <!--                        </dependency>-->
+                <!--                    </dependencies>-->
+                <!--                    <executions>-->
+                <!--                        <execution>-->
+                <!--                            <goals>-->
+                <!--                                <goal>check</goal>-->
+                <!--                            </goals>-->
+                <!--                            <phase>compile</phase>-->
+                <!--                        </execution>-->
+                <!--                    </executions>-->
+                <!--                </plugin>-->
             </plugins>
         </pluginManagement>
 
@@ -659,110 +659,110 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>com.diffplug.spotless</groupId>-->
-<!--                <artifactId>spotless-maven-plugin</artifactId>-->
-<!--                <version>${spotless.version}</version>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash; optional: limit format enforcement to just the files changed by this feature branch &ndash;&gt;-->
-<!--                    <ratchetFrom>HEAD</ratchetFrom>-->
-<!--                    <java>-->
-<!--                        <eclipse>-->
-<!--                            <file>style/spotless_dlink_formatter.xml</file>-->
-<!--                        </eclipse>-->
-<!--                        <removeUnusedImports />-->
-<!--                        <importOrder>-->
-<!--                            <order>\#,com.dlink,org.apache,java,javassist,javax,org,com,</order>-->
-<!--                        </importOrder>-->
-<!--                        <licenseHeader>-->
-<!--                            <file>style/license_header</file>-->
-<!--                        </licenseHeader>-->
-<!--                        <replaceRegex>-->
-<!--                            <name>Remove wildcard imports</name>-->
-<!--                            <searchRegex>import\s+[^\*\s]+\*;(\r\n|\r|\n)</searchRegex>-->
-<!--                            <replacement>$1</replacement>-->
-<!--                        </replaceRegex>-->
-<!--                    </java>-->
-<!--                    <pom>-->
-<!--                        <sortPom>-->
-<!--                            <encoding>UTF-8</encoding>-->
-<!--                            <nrOfIndentSpace>4</nrOfIndentSpace>-->
-<!--                            <keepBlankLines>true</keepBlankLines>-->
-<!--                            <indentBlankLines>false</indentBlankLines>-->
-<!--                            <indentSchemaLocation>true</indentSchemaLocation>-->
-<!--                            <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>-->
-<!--                            <sortModules>false</sortModules>-->
-<!--                            <sortExecutions>false</sortExecutions>-->
-<!--                            <predefinedSortOrder>custom_1</predefinedSortOrder>-->
-<!--                            <expandEmptyElements>false</expandEmptyElements>-->
-<!--                            <sortProperties>false</sortProperties>-->
-<!--                        </sortPom>-->
-<!--                        <replace>-->
-<!--                            <name>Leading blank line</name>-->
-<!--                            <search>project</search>-->
-<!--                            <replacement>project</replacement>-->
-<!--                        </replace>-->
-<!--                    </pom>-->
-<!--                    <markdown>-->
-<!--                        <includes>-->
-<!--                            <include>**/*.md</include>-->
-<!--                        </includes>-->
-<!--                        <flexmark />-->
-<!--                    </markdown>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                        <phase>compile</phase>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
+            <!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.diffplug.spotless</groupId>-->
+            <!--                <artifactId>spotless-maven-plugin</artifactId>-->
+            <!--                <version>${spotless.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    &lt;!&ndash; optional: limit format enforcement to just the files changed by this feature branch &ndash;&gt;-->
+            <!--                    <ratchetFrom>HEAD</ratchetFrom>-->
+            <!--                    <java>-->
+            <!--                        <eclipse>-->
+            <!--                            <file>style/spotless_dlink_formatter.xml</file>-->
+            <!--                        </eclipse>-->
+            <!--                        <removeUnusedImports />-->
+            <!--                        <importOrder>-->
+            <!--                            <order>\#,com.dlink,org.apache,java,javassist,javax,org,com,</order>-->
+            <!--                        </importOrder>-->
+            <!--                        <licenseHeader>-->
+            <!--                            <file>style/license_header</file>-->
+            <!--                        </licenseHeader>-->
+            <!--                        <replaceRegex>-->
+            <!--                            <name>Remove wildcard imports</name>-->
+            <!--                            <searchRegex>import\s+[^\*\s]+\*;(\r\n|\r|\n)</searchRegex>-->
+            <!--                            <replacement>$1</replacement>-->
+            <!--                        </replaceRegex>-->
+            <!--                    </java>-->
+            <!--                    <pom>-->
+            <!--                        <sortPom>-->
+            <!--                            <encoding>UTF-8</encoding>-->
+            <!--                            <nrOfIndentSpace>4</nrOfIndentSpace>-->
+            <!--                            <keepBlankLines>true</keepBlankLines>-->
+            <!--                            <indentBlankLines>false</indentBlankLines>-->
+            <!--                            <indentSchemaLocation>true</indentSchemaLocation>-->
+            <!--                            <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>-->
+            <!--                            <sortModules>false</sortModules>-->
+            <!--                            <sortExecutions>false</sortExecutions>-->
+            <!--                            <predefinedSortOrder>custom_1</predefinedSortOrder>-->
+            <!--                            <expandEmptyElements>false</expandEmptyElements>-->
+            <!--                            <sortProperties>false</sortProperties>-->
+            <!--                        </sortPom>-->
+            <!--                        <replace>-->
+            <!--                            <name>Leading blank line</name>-->
+            <!--                            <search>project</search>-->
+            <!--                            <replacement>project</replacement>-->
+            <!--                        </replace>-->
+            <!--                    </pom>-->
+            <!--                    <markdown>-->
+            <!--                        <includes>-->
+            <!--                            <include>**/*.md</include>-->
+            <!--                        </includes>-->
+            <!--                        <flexmark />-->
+            <!--                    </markdown>-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <goals>-->
+            <!--                            <goal>check</goal>-->
+            <!--                        </goals>-->
+            <!--                        <phase>compile</phase>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 
     <profiles>
-        <profile>
-            <id>maven-central</id>
-            <activation>
-                <property>
-                    <name>maven-central</name>
-                </property>
-            </activation>
-            <repositories>
-                <repository>
-                    <id>maven-central</id>
-                    <url>https://repo1.maven.org/maven2/</url>
-                </repository>
-            </repositories>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>maven-central</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>maven-central</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <repositories>-->
+        <!--                <repository>-->
+        <!--                    <id>maven-central</id>-->
+        <!--                    <url>https://repo1.maven.org/maven2/</url>-->
+        <!--                </repository>-->
+        <!--            </repositories>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>aliyun</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <property>
-                    <name>aliyun</name>
-                </property>
-            </activation>
-            <repositories>
-                <repository>
-                    <id>aliyun</id>
-                    <url>https://maven.aliyun.com/repository/central</url>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>aliyun</id>
-                    <url>https://maven.aliyun.com/repository/central</url>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>aliyun</id>-->
+        <!--            <activation>-->
+        <!--                <activeByDefault>true</activeByDefault>-->
+        <!--                <property>-->
+        <!--                    <name>aliyun</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <repositories>-->
+        <!--                <repository>-->
+        <!--                    <id>aliyun</id>-->
+        <!--                    <url>https://maven.aliyun.com/repository/central</url>-->
+        <!--                </repository>-->
+        <!--            </repositories>-->
+        <!--            <pluginRepositories>-->
+        <!--                <pluginRepository>-->
+        <!--                    <id>aliyun</id>-->
+        <!--                    <url>https://maven.aliyun.com/repository/central</url>-->
+        <!--                </pluginRepository>-->
+        <!--            </pluginRepositories>-->
+        <!--        </profile>-->
 
         <profile>
             <id>web</id>
@@ -780,79 +780,82 @@
                 <property>
                     <name>dev</name>
                 </property>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <!--  `provided` for product environment ,`compile` for dev environment  -->
                 <scope.runtime>compile</scope.runtime>
             </properties>
+
         </profile>
 
-        <profile>
-            <id>prod</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <property>
-                    <name>!dev</name>
-                </property>
-            </activation>
-            <properties>
-                <!--  `provided` for product environment ,`compile` for dev environment  -->
-                <scope.runtime>provided</scope.runtime>
-            </properties>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>prod</id>-->
+        <!--            <activation>-->
+        <!--                <activeByDefault>true</activeByDefault>-->
+        <!--                <property>-->
+        <!--                    <name>!dev</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                &lt;!&ndash;  `provided` for product environment ,`compile` for dev environment  &ndash;&gt;-->
+        <!--                <scope.runtime>provided</scope.runtime>-->
+        <!--            </properties>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>scala-2.11</id>
-            <activation>
-                <property>
-                    <name>scala-2.11</name>
-                </property>
-            </activation>
-            <properties>
-                <scala.binary.version>2.11</scala.binary.version>
-                <scala.version>2.11.7</scala.version>
-            </properties>
-        </profile>
+                <profile>
+                    <id>scala-2.11</id>
+                    <activation>
+                        <property>
+                            <name>scala-2.11</name>
+                        </property>
+                        <activeByDefault>true</activeByDefault>
+                    </activation>
+                    <properties>
+                        <scala.binary.version>2.11</scala.binary.version>
+                        <scala.version>2.11.7</scala.version>
+                    </properties>
+                </profile>
 
-        <profile>
-            <id>scala-2.12</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <property>
-                    <name>!scala-2.11</name>
-                </property>
-            </activation>
-            <properties>
-                <scala.binary.version>2.12</scala.binary.version>
-                <scala.version>2.12.10</scala.version>
-            </properties>
-        </profile>
+<!--        <profile>-->
+<!--            <id>scala-2.12</id>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--                <property>-->
+<!--                    <name>!scala-2.11</name>-->
+<!--                </property>-->
+<!--            </activation>-->
+<!--            <properties>-->
+<!--                <scala.binary.version>2.12</scala.binary.version>-->
+<!--                <scala.version>2.12.10</scala.version>-->
+<!--            </properties>-->
+<!--        </profile>-->
 
-        <profile>
-            <id>flink-1.11</id>
-            <activation>
-                <property>
-                    <name>flink-1.11</name>
-                </property>
-            </activation>
-            <properties>
-                <!--  modify flink version  -->
-                <dlink.flink.version>1.11</dlink.flink.version>
-            </properties>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>flink-1.11</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>flink-1.11</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                &lt;!&ndash;  modify flink version  &ndash;&gt;-->
+        <!--                <dlink.flink.version>1.11</dlink.flink.version>-->
+        <!--            </properties>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>flink-1.12</id>
-            <activation>
-                <property>
-                    <name>flink-1.12</name>
-                </property>
-            </activation>
-            <properties>
-                <!--  modify flink version  -->
-                <dlink.flink.version>1.12</dlink.flink.version>
-            </properties>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>flink-1.12</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>flink-1.12</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                &lt;!&ndash;  modify flink version  &ndash;&gt;-->
+        <!--                <dlink.flink.version>1.12</dlink.flink.version>-->
+        <!--            </properties>-->
+        <!--        </profile>-->
 
         <profile>
             <id>flink-1.13</id>
@@ -860,6 +863,7 @@
                 <property>
                     <name>flink-1.13</name>
                 </property>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <!--  modify flink version  -->
@@ -867,176 +871,176 @@
             </properties>
         </profile>
 
-        <profile>
-            <id>flink-1.14</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <property>
-                    <name>flink-1.14</name>
-                </property>
-            </activation>
-            <properties>
-                <!--  modify flink version  -->
-                <dlink.flink.version>1.14</dlink.flink.version>
-            </properties>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>flink-1.14</id>-->
+        <!--            <activation>-->
+        <!--                <activeByDefault>true</activeByDefault>-->
+        <!--                <property>-->
+        <!--                    <name>flink-1.14</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                &lt;!&ndash;  modify flink version  &ndash;&gt;-->
+        <!--                <dlink.flink.version>1.14</dlink.flink.version>-->
+        <!--            </properties>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>flink-1.15</id>
-            <activation>
-                <property>
-                    <name>flink-1.15</name>
-                </property>
-            </activation>
-            <properties>
-                <!--  modify flink version  -->
-                <dlink.flink.version>1.15</dlink.flink.version>
-            </properties>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>flink-1.15</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>flink-1.15</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                &lt;!&ndash;  modify flink version  &ndash;&gt;-->
+        <!--                <dlink.flink.version>1.15</dlink.flink.version>-->
+        <!--            </properties>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>flink-1.16</id>
-            <activation>
-                <property>
-                    <name>flink-1.16</name>
-                </property>
-            </activation>
-            <properties>
-                <!--  modify flink version  -->
-                <dlink.flink.version>1.16</dlink.flink.version>
-                <flink.version>1.16.0</flink.version>
-            </properties>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>flink-1.16</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>flink-1.16</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                &lt;!&ndash;  modify flink version  &ndash;&gt;-->
+        <!--                <dlink.flink.version>1.16</dlink.flink.version>-->
+        <!--                <flink.version>1.16.0</flink.version>-->
+        <!--            </properties>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>all</id>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>all</id>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>jdk8</id>
-            <activation>
-                <jdk>8</jdk>
-            </activation>
-            <properties>
-                <target.java.version>8</target.java.version>
-            </properties>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>build-helper-maven-plugin</artifactId>
-                            <version>1.10</version>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-shade-plugin</artifactId>
-                        </plugin>
-                        <plugin>
-                            <groupId>com.github.siom79.japicmp</groupId>
-                            <artifactId>japicmp-maven-plugin</artifactId>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>javax.xml.bind</groupId>
-                                    <artifactId>jaxb-api</artifactId>
-                                    <version>2.3.0</version>
-                                </dependency>
-                                <dependency>
-                                    <groupId>com.sun.xml.bind</groupId>
-                                    <artifactId>jaxb-impl</artifactId>
-                                    <version>2.3.0</version>
-                                </dependency>
-                                <dependency>
-                                    <groupId>com.sun.xml.bind</groupId>
-                                    <artifactId>jaxb-core</artifactId>
-                                    <version>2.3.0</version>
-                                </dependency>
-                                <dependency>
-                                    <groupId>javax.activation</groupId>
-                                    <artifactId>activation</artifactId>
-                                    <version>1.1.1</version>
-                                </dependency>
-                            </dependencies>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-surefire-plugin</artifactId>
-                            <configuration>
-                                <excludedGroups>org.apache.flink.testutils.junit.FailsOnJava11</excludedGroups>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <configuration>
-                                <additionalJOptions>
-                                    <additionalJOption>--add-exports=java.base/sun.net.util=ALL-UNNAMED</additionalJOption>
-                                </additionalJOptions>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
+        <!--        <profile>-->
+        <!--            <id>jdk8</id>-->
+        <!--            <activation>-->
+        <!--                <jdk>8</jdk>-->
+        <!--            </activation>-->
+        <!--            <properties>-->
+        <!--                <target.java.version>8</target.java.version>-->
+        <!--            </properties>-->
+        <!--            <build>-->
+        <!--                <pluginManagement>-->
+        <!--                    <plugins>-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>org.codehaus.mojo</groupId>-->
+        <!--                            <artifactId>build-helper-maven-plugin</artifactId>-->
+        <!--                            <version>1.10</version>-->
+        <!--                        </plugin>-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                            <artifactId>maven-shade-plugin</artifactId>-->
+        <!--                        </plugin>-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>com.github.siom79.japicmp</groupId>-->
+        <!--                            <artifactId>japicmp-maven-plugin</artifactId>-->
+        <!--                            <dependencies>-->
+        <!--                                <dependency>-->
+        <!--                                    <groupId>javax.xml.bind</groupId>-->
+        <!--                                    <artifactId>jaxb-api</artifactId>-->
+        <!--                                    <version>2.3.0</version>-->
+        <!--                                </dependency>-->
+        <!--                                <dependency>-->
+        <!--                                    <groupId>com.sun.xml.bind</groupId>-->
+        <!--                                    <artifactId>jaxb-impl</artifactId>-->
+        <!--                                    <version>2.3.0</version>-->
+        <!--                                </dependency>-->
+        <!--                                <dependency>-->
+        <!--                                    <groupId>com.sun.xml.bind</groupId>-->
+        <!--                                    <artifactId>jaxb-core</artifactId>-->
+        <!--                                    <version>2.3.0</version>-->
+        <!--                                </dependency>-->
+        <!--                                <dependency>-->
+        <!--                                    <groupId>javax.activation</groupId>-->
+        <!--                                    <artifactId>activation</artifactId>-->
+        <!--                                    <version>1.1.1</version>-->
+        <!--                                </dependency>-->
+        <!--                            </dependencies>-->
+        <!--                        </plugin>-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                            <artifactId>maven-surefire-plugin</artifactId>-->
+        <!--                            <configuration>-->
+        <!--                                <excludedGroups>org.apache.flink.testutils.junit.FailsOnJava11</excludedGroups>-->
+        <!--                            </configuration>-->
+        <!--                        </plugin>-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                            <artifactId>maven-javadoc-plugin</artifactId>-->
+        <!--                            <configuration>-->
+        <!--                                <additionalJOptions>-->
+        <!--                                    <additionalJOption>&#45;&#45;add-exports=java.base/sun.net.util=ALL-UNNAMED</additionalJOption>-->
+        <!--                                </additionalJOptions>-->
+        <!--                            </configuration>-->
+        <!--                        </plugin>-->
+        <!--                    </plugins>-->
+        <!--                </pluginManagement>-->
 
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <source>8</source>
-                            <target>8</target>
-                            <compilerArgs combine.children="append">
-                                <arg>--add-exports=java.base/sun.net.util=ALL-UNNAMED</arg>
-                                <arg>--add-exports=java.management/sun.management=ALL-UNNAMED</arg>
-                                <arg>--add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED</arg>
-                                <arg>--add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED</arg>
-                            </compilerArgs>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+        <!--                <plugins>-->
+        <!--                    <plugin>-->
+        <!--                        <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                        <artifactId>maven-compiler-plugin</artifactId>-->
+        <!--                        <configuration>-->
+        <!--                            <source>8</source>-->
+        <!--                            <target>8</target>-->
+        <!--                            <compilerArgs combine.children="append">-->
+        <!--                                <arg>&#45;&#45;add-exports=java.base/sun.net.util=ALL-UNNAMED</arg>-->
+        <!--                                <arg>&#45;&#45;add-exports=java.management/sun.management=ALL-UNNAMED</arg>-->
+        <!--                                <arg>&#45;&#45;add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED</arg>-->
+        <!--                                <arg>&#45;&#45;add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED</arg>-->
+        <!--                            </compilerArgs>-->
+        <!--                        </configuration>-->
+        <!--                    </plugin>-->
+        <!--                </plugins>-->
+        <!--            </build>-->
+        <!--        </profile>-->
 
-        <profile>
-            <id>fast</id>
-            <activation>
-                <property>
-                    <name>fast</name>
-                </property>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-<!--                        <plugin>-->
-<!--                            <groupId>org.apache.maven.plugins</groupId>-->
-<!--                            <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                            <configuration>-->
-<!--                                <skip>true</skip>-->
-<!--                            </configuration>-->
-<!--                        </plugin>-->
-<!--                        <plugin>-->
-<!--                            <groupId>com.diffplug.spotless</groupId>-->
-<!--                            <artifactId>spotless-maven-plugin</artifactId>-->
-<!--                            <configuration>-->
-<!--                                <skip>true</skip>-->
-<!--                            </configuration>-->
-<!--                        </plugin>-->
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-enforcer-plugin</artifactId>
-                            <configuration>
-                                <skip>true</skip>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <configuration>
-                                <skip>true</skip>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
+        <!--        <profile>-->
+        <!--            <id>fast</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>fast</name>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <build>-->
+        <!--                <pluginManagement>-->
+        <!--                    <plugins>-->
+        <!--&lt;!&ndash;                        <plugin>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            <artifactId>maven-checkstyle-plugin</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            <configuration>&ndash;&gt;-->
+        <!--&lt;!&ndash;                                <skip>true</skip>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            </configuration>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        </plugin>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <plugin>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            <groupId>com.diffplug.spotless</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            <artifactId>spotless-maven-plugin</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            <configuration>&ndash;&gt;-->
+        <!--&lt;!&ndash;                                <skip>true</skip>&ndash;&gt;-->
+        <!--&lt;!&ndash;                            </configuration>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        </plugin>&ndash;&gt;-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                            <artifactId>maven-enforcer-plugin</artifactId>-->
+        <!--                            <configuration>-->
+        <!--                                <skip>true</skip>-->
+        <!--                            </configuration>-->
+        <!--                        </plugin>-->
+        <!--                        <plugin>-->
+        <!--                            <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                            <artifactId>maven-javadoc-plugin</artifactId>-->
+        <!--                            <configuration>-->
+        <!--                                <skip>true</skip>-->
+        <!--                            </configuration>-->
+        <!--                        </plugin>-->
+        <!--                    </plugins>-->
+        <!--                </pluginManagement>-->
+        <!--            </build>-->
+        <!--        </profile>-->
     </profiles>
 </project>

@@ -53,6 +53,8 @@ public interface FlinkSQLConstant {
      */
     String INNER_DATETIME_KEY = "_CURRENT_DATE_";
 
+    String CURRENT_TIME_MILLIS = "current_time_millis";
+
     /**
      * 内置日期变量格式
      * 确定后不能修改

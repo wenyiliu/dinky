@@ -19,15 +19,9 @@
 
 package com.dlink.executor;
 
-import static org.apache.flink.util.Preconditions.checkArgument;
-import static org.apache.flink.util.Preconditions.checkNotNull;
-
-import static java.lang.String.format;
-
 import com.dlink.assertion.Asserts;
 import com.dlink.constant.FlinkSQLConstant;
 import com.dlink.model.SystemConfiguration;
-
 import org.apache.flink.table.api.DataTypes;
 import org.apache.flink.table.api.ExpressionParserException;
 import org.apache.flink.table.api.Table;
@@ -45,8 +39,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static java.lang.String.format;
+import static org.apache.flink.util.Preconditions.checkArgument;
+import static org.apache.flink.util.Preconditions.checkNotNull;
 
 /**
  * Flink Sql Fragment Manager
@@ -144,6 +143,9 @@ public final class SqlManager {
         if (isInnerDateVar(sqlFragmentName)) {
             return parseDateVar(sqlFragmentName);
         }
+        if (isCurrentTimeMillis(sqlFragmentName)) {
+            return currentTimeMillis(sqlFragmentName);
+        }
 
         throw new CatalogException(format("The fragment of sql %s does not exist.", sqlFragmentName));
     }
@@ -240,7 +242,19 @@ public final class SqlManager {
             if (value == null && isInnerDateVar(key)) {
                 value = parseDateVar(key);
             }
+            if (Objects.nonNull(value) && isCurrentTimeMillis(value)) {
+                value = currentTimeMillis(value);
+                if (Objects.nonNull(value)) {
+                    value = value.trim();
+                    if (!value.startsWith("'")) {
+                        value = "'" + value;
+                    }
+                    if (!value.endsWith("'")) {
+                        value = value + "'";
+                    }
+                }
 
+            }
             sb.append(value == null ? "" : value);
         }
         m.appendTail(sb);
@@ -249,19 +263,21 @@ public final class SqlManager {
 
     /**
      * verify if key is inner variable
+     *
      * @param key
      * @return
      */
     private boolean isInnerDateVar(String key) {
-        if (key.startsWith(FlinkSQLConstant.INNER_DATETIME_KEY)) {
-            return true;
-        }
+        return key.startsWith(FlinkSQLConstant.INNER_DATETIME_KEY);
+    }
 
-        return false;
+    private boolean isCurrentTimeMillis(String key) {
+        return key.contains(FlinkSQLConstant.CURRENT_TIME_MILLIS);
     }
 
     /**
      * parse datetime var
+     *
      * @param key
      * @return
      */
@@ -286,9 +302,28 @@ public final class SqlManager {
         Date endDate = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(endDate);
-        calendar.add(Calendar.DAY_OF_YEAR,days);
+        calendar.add(Calendar.DAY_OF_YEAR, days);
         Date startDate = calendar.getTime();
 
         return dtf.format(startDate);
+    }
+
+    private String currentTimeMillis(String key) {
+        long currentTimeMillis = System.currentTimeMillis();
+        try {
+            if (key.contains("+")) {
+                int s = key.indexOf("+") + 1;
+                String num = key.substring(s).trim();
+                currentTimeMillis = currentTimeMillis + Long.parseLong(num);
+            } else if (key.contains("-")) {
+                int s = key.indexOf("-") + 1;
+                String num = key.substring(s).trim();
+                currentTimeMillis = currentTimeMillis - Long.parseLong(num);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return String.valueOf(currentTimeMillis);
     }
 }

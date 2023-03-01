@@ -49,11 +49,6 @@
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-sql-orc -->
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-sql-orc_2.12</artifactId>
-            <version>1.13.6</version>
-        </dependency>
     </dependencies>
 
     <build>
